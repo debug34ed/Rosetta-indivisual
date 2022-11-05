@@ -1,0 +1,8 @@
+if(NOT TARGET protocol)
+add_subdirectory(protocol/utility)
+add_subdirectory(protocol/public)
+    add_subdirectory(protocol/mpc)
+    IF(ROSETTA_ENABLES_PROTOCOL_ZK)
+        add_subdirectory(protocol/zk)
+    ENDIF()
+endif()
